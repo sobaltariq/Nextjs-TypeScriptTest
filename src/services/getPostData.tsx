@@ -10,6 +10,7 @@ interface Post {
 export const getAllPostsData = async () => {
   try {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    await customWait(1000);
 
     return await response.json();
   } catch (err) {
@@ -18,12 +19,12 @@ export const getAllPostsData = async () => {
   }
 };
 
-export const getSInglePostData = async (id: number): Promise<Post | null> => {
+export const getSinglePostData = async (id: number): Promise<Post | null> => {
   try {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/posts/${id}`
     );
-
+    await customWait(500);
     return await response.json();
   } catch (err) {
     console.log(err);

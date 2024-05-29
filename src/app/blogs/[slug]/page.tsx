@@ -1,6 +1,6 @@
 "use client";
 
-import { getSInglePostData } from "@/services/getPostData";
+import { getSinglePostData } from "@/services/getPostData";
 import React, { useEffect, useState } from "react";
 
 // export async function generateStaticParams() {
@@ -21,7 +21,7 @@ export default function Page({ params }: { params: any }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const singlePost: any = await getSInglePostData(params.slug);
+        const singlePost: any = await getSinglePostData(params.slug);
         console.log("Single Post: ", singlePost);
         setPostData(singlePost);
       } catch (err) {

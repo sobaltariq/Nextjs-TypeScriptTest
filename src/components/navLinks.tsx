@@ -13,6 +13,13 @@ export function NavLinks() {
       </Link>
 
       <Link
+        className={`link ${pathname === "/parallel" ? "active" : ""}`}
+        href="/parallel"
+      >
+        Parallel
+      </Link>
+
+      <Link
         className={`link ${pathname === "/about" ? "active" : ""}`}
         href="/about"
       >
